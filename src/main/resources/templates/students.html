@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students Managment System</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<section class="sectionTable">
+    <h1>Все студенты</h1>
+    <table id="studentsTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Отчество</th>
+            <th>Дата рождения</th>
+            <th>Группа</th>
+            <th>Уникальный номер</th>
+            <th>Действия</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</section>
+<section class="sectionForm">
+    <h1>Добавить студента</h1>
+    <form id="addStudentForm" novalidate>
+        <div class="fullName">
+            <div>
+                <input type="text" id="firstName" placeholder="" /><br /><br />
+                <label for="firstName">Имя</label>
+            </div>
+            <div>
+                <input type="text" id="lastName" required /><br /><br />
+                <label for="lastName">Фамилия</label>
+            </div>
+            <div>
+                <input type="text" id="patronymic" /><br /><br />
+                <label for="patronymic">Отчество</label>
+            </div>
+        </div>
+        <label for="birthDate">Дата рождения</label>
+        <input type="date" id="birthDate" required /><br /><br />
+        <label for="group">Группа</label>
+        <input type="text" id="group" required /><br /><br />
+        <label for="uniqueNumber">Уникальный номер</label>
+        <input type="text" id="uniqueNumber" required /><br /><br />
+        <p class="error">Заполните все поля формы</p>
+        <button class="submitButton" type="submit">Добавить студента</button>
+    </form>
+</section>
+<script src="/fetch.js"></script>
+</body>
+</html>
